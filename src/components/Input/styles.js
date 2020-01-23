@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
         borderBottomColor: '#FFF'
     },
     secondary: {
-        color: '#ACACAC',
+        color: '#292929',
         borderBottomColor: '#ACACAC'
     },
     inputContainerPrimary: {
