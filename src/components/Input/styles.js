@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
         borderBottomColor: '#ACACAC'
     },
     containerStyle: {
-        marginVertical: 10
+        marginVertical: 5
     }
 });
 
