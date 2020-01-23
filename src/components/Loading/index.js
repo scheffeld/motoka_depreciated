@@ -4,7 +4,7 @@ import styles from './styles'
 
 const LoadingComponent = (props) => (
     <ActivityIndicator
-        size='large'
+        size={props.size || 'large'}
         color={props.color}
         animating={true}
         style={styles.container}/>
