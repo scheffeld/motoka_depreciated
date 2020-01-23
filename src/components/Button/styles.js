@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     },
     buttonStyle: {
         marginHorizontal: 10,
-        padding: 14,
+        padding: 10,
     },
     buttonPrimary: {
         backgroundColor: '#FFF'
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#7D40E7'
     },
     containerStyle: {
-        marginVertical: 10
+        marginVertical: 5
     }
 });
 
