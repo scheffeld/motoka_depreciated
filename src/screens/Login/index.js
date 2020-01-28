@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, StatusBar, Alert } from 'react-native';
 import axios from 'axios';
+import { Toast } from 'native-base';
 
 import styles from './styles'
 import InputComponent from '../../components/Input'
@@ -17,7 +18,7 @@ const LoginScreen = ({ navigation }) => {
         if(email && pass){
             const response = await axios.post('http://motoka-backend.herokuapp.com/auth', { email, pass })
             if(response.status == 200){
-                navigation.navigate('Home')
+                navigation.navigate('Home', { user: response.data.user.displayName, uid: response.data.user.uid })
             } else {
                 Alert.alert(
                     'Falha no Login',
@@ -28,7 +29,11 @@ const LoginScreen = ({ navigation }) => {
                 )
             }
         } else {
-            alert('Teste')
+            Toast.show({
+                text: 'Verifique os campos e tente novamente.',
+                buttonText: 'OK',
+                position: 'center'
+            })
         }
         setLoading(false)
     }
