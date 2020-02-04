@@ -61,13 +61,11 @@ const LoginScreen = ({ navigation }) => {
                 <>
                     <ButtonComponent
                         title='Entrar'
-                        titleStyle='titlePrimary'
-                        buttonStyle='buttonPrimary'
+                        type='primary'
                         onPress={() => login()}/>
                     <ButtonComponent
                         title='Cadastrar'
-                        titleStyle='titleSecondary'
-                        buttonStyle='buttonSecondary'
+                        type='secondary'
                         onPress={() => navigation.navigate('New User')}/>
                 </>
             }
