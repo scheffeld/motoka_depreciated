@@ -1,28 +1,28 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-    titleStyle: {
+    container: {
+        marginVertical: 5
+    },
+    title: {
         fontWeight: 'bold',
         fontSize: 18
     },
-    titlePrimary: {
-        color: '#7D40E7'
-    },
-    titleSecondary: {
-        color: '#FFF'
-    },
-    buttonStyle: {
+    button: {
         marginHorizontal: 10,
         padding: 10,
     },
-    buttonPrimary: {
+    primaryTitle: {
+        color: '#7D40E7'
+    },
+    secondaryTitle: {
+        color: '#FFF'
+    },
+    primaryButton: {
         backgroundColor: '#FFF'
     },
-    buttonSecondary: {
+    secondaryButton: {
         backgroundColor: '#7D40E7'
-    },
-    containerStyle: {
-        marginVertical: 5
     }
 });
 
