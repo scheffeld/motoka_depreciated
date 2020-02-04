@@ -1,21 +1,20 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-    primary: {
+    primaryLabel: {
         color: '#FFF',
-        borderBottomColor: '#FFF'
     },
-    secondary: {
+    secondaryLabel: {
         color: '#292929',
         borderBottomColor: '#ACACAC'
     },
-    inputContainerPrimary: {
+    primaryInput: {
         borderBottomColor: '#FFF'
     },
-    inputContainerSecondary: {
+    secondaryInput: {
         borderBottomColor: '#ACACAC'
     },
-    containerStyle: {
+    container: {
         marginVertical: 5
     }
 });

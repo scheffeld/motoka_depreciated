@@ -7,10 +7,10 @@ const InputComponent = (props) => {
     return(
         <Input
             label={props.label}
-            labelStyle={styles[props.inputStyle]}
-            inputContainerStyle={styles[props.inputStyle]}
-            inputStyle={styles[props.inputStyle]}
-            containerStyle={styles.containerStyle}
+            labelStyle={props.type == 'primary' ? styles.primaryLabel : styles.secondaryLabel}
+            inputStyle={props.type == 'primary' ? styles.primaryLabel : styles.secondaryLabel}
+            inputContainerStyle={props.type == 'primary' ? styles.primaryInput : styles.secondaryInput}
+            containerStyle={styles.container}
             placeholder={props.placeholder}
             onChange={props.onChange}
             onChangeText={props.onChangeText}
