@@ -6,18 +6,16 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     modal: {
-      backgroundColor: '#fff',
+      backgroundColor: '#FFF',
       borderRadius: 2,
       margin: 10,
       padding: 10,
-      shadowColor: "#000",
       shadowOffset: {
           width: 0,
           height: 2,
       },
       shadowOpacity: 0.25,
       shadowRadius: 3.84,
-      
       elevation: 5,
     }
   })

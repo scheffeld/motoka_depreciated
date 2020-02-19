@@ -14,7 +14,6 @@ const ModalComponent = (props) => (
                     {props.children}
                 </View>
             </View>
-
     </Modal>
 );
 
