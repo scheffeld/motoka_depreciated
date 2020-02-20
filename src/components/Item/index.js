@@ -4,10 +4,10 @@ import { Icon } from 'react-native-elements';
 import { Text } from 'react-native';
 import styles from './styles'
 
-const ItemComponent = (props) => {
+const ItemComponent = (props, key) => {
     const item = props.item
     return(
-        <ListItem key={props.key} style={styles.item} onPress={props.onPress}>
+        <ListItem key={key} style={styles.item} onPress={props.onPress}>
             <Left>
                 <Text>{item.date}</Text>
             </Left>
