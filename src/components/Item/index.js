@@ -7,7 +7,7 @@ import styles from './styles'
 const ItemComponent = (props) => {
     const item = props.item
     return(
-        <ListItem key={item.id} style={styles.item} onPress={props.onPress}>
+        <ListItem key={props.key} style={styles.item} onPress={props.onPress}>
             <Left>
                 <Text>{item.date}</Text>
             </Left>
