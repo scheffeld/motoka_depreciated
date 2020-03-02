@@ -19,7 +19,7 @@ const RecordDetailsComponent = (props) => {
                 </View>
                 <View style={{ flexDirection: 'row', padding: 10, justifyContent: 'space-between' }}>
                     <Text style={styles.title}>KM: </Text>
-                    <Text>{record.km}</Text>
+                    <Text>{record.startKM}</Text>
                 </View>
                 <View style={{ flexDirection: 'row', padding: 10, justifyContent: 'space-between' }}>
                     <Text style={styles.title}>Litros: </Text>
