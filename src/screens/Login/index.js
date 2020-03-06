@@ -42,13 +42,13 @@ const LoginScreen = ({ navigation }) => {
         <View style={styles.container}>
             <StatusBar backgroundColor='#7D40E7' barStyle='light-content'/>
             <InputComponent
-                label='Email'
+                placeholder='Email'
                 type='primary'
                 autoCapitalize='none'
                 value={email}
                 onChangeText={value => setEmail(value)}/>
             <InputComponent
-                label='Senha'
+                placeholder='Senha'
                 type='primary'
                 autoCapitalize='none'
                 secureTextEntry={true}

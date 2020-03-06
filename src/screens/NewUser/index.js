@@ -65,32 +65,32 @@ const NewUserScreen = ({ navigation }) => {
         <View style={styles.container}>
             <StatusBar backgroundColor='#7D40E7' barStyle='light-content'/>
             <InputComponent
-                label='Nome'
+                placeholder='Nome'
                 type='secondary'
                 autoCapitalize='words'
                 value={name}
                 onChangeText={value => setName(value)}/>
             <InputComponent
-                label='Email'
+                placeholder='Email'
                 type='secondary'
                 autoCapitalize='none'
                 value={email}
                 onChangeText={value => setEmail(value)}/>
             <InputComponent
-                label='Confirmação do Email'
+                placeholder='Confirmação do Email'
                 type='secondary'
                 autoCapitalize='none'
                 value={emailConfirm}
                 onChangeText={value => setEmailConfirm(value)}/>
             <InputComponent
-                label='Senha'
+                placeholder='Senha'
                 type='secondary'
                 autoCapitalize='none'
                 secureTextEntry={true}
                 value={pass}
                 onChangeText={value => setPass(value)}/>
             <InputComponent
-                label='Confirmação da Senha'
+                placeholder='Confirmação da Senha'
                 type='secondary'
                 autoCapitalize='none'
                 secureTextEntry={true}

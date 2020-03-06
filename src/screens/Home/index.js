@@ -99,7 +99,8 @@ const HomeScreen = ({ navigation }) => {
                 active={true}
                 direction="up"
                 style={{ backgroundColor: '#7D40E7' }}
-                position="bottomRight">
+                position="bottomRight"
+                onPress={() => navigation.navigate('NewRecord')}>
                 <Icon name="plus" type='FontAwesome5' color='#FFF'/>
             </Fab>
         </View>
