@@ -16,10 +16,15 @@ const LoginScreen = ({ navigation }) => {
     const login = async () => {
         setLoading(true)
         if(email && pass){
-            const response = await axios.post('http://motoka-backend.herokuapp.com/auth', { email, pass })
-            if(response.status == 200){
-                navigation.navigate('Home', { user: response.data.user.displayName, uid: response.data.user.uid })
-            } else {
+            try {
+                const response = await axios.post('http://motoka-backend.herokuapp.com/auth', { email, pass })
+                const user = { 
+                    name: response.data.user.displayName,
+                    uid: response.data.user.uid
+                }
+                navigation.navigate('Home', user)
+            }
+            catch(e){
                 Alert.alert(
                     'Falha no Login',
                     'Verifique se o email e/ou a senha estão corretas. Caso não tenha cadastro, clique em cadastrar.',
