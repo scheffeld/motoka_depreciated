@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StatusBar, Alert } from 'react-native';
 import { Fab, Button, Icon, Toast } from 'native-base';
 import axios from 'axios';
-import styles from './styles'
+import styles from './styles';
+import { NavigationEvents } from 'react-navigation';
 /**
  * Import de componentes
  */
@@ -17,19 +18,18 @@ const HomeScreen = ({ navigation }) => {
     const [ record, setRecord ] = useState({})
     const [ isLoading, setIsLoading ] = useState(true)
     const user = {
-        user: JSON.stringify(navigation.getParam('user')),
-        uid: JSON.stringify(navigation.getParam('uid'))
+        name: navigation.getParam('user'),
+        uid: navigation.getParam('uid')
     }
 
     useEffect(() => {
-        const getData = async () => {
+        const unsubscribe = navigation.addListener('didFocus', async () => {
             const response = await axios.get('https://motoka-backend.herokuapp.com/all')
             setData(response.data)
             setIsLoading(false)
-            console.log(data)
-        }
-        getData()
-    }, [])
+        })
+        return unsubscribe
+    }, [navigation])
 
     const openModal = (item) => {
         setRecord(item)
@@ -59,7 +59,7 @@ const HomeScreen = ({ navigation }) => {
                     text: 'Excluir',
                     onPress: () => {
                         try {
-                            // axios.delete(`https://motoka-backend.herokuapp.com/${source.type}/${source.id}`)
+                            axios.delete(`https://motoka-backend.herokuapp.com/${source.type}/${source.id}`)
                             removeItem(source)
                         }
                         catch(e){
@@ -100,7 +100,7 @@ const HomeScreen = ({ navigation }) => {
                 direction="up"
                 style={{ backgroundColor: '#7D40E7' }}
                 position="bottomRight"
-                onPress={() => navigation.navigate('NewRecord')}>
+                onPress={() => navigation.navigate('New Record', user)}>
                 <Icon name="plus" type='FontAwesome5' color='#FFF'/>
             </Fab>
         </View>
